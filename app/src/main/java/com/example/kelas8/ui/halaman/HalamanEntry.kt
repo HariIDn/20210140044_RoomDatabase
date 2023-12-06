@@ -27,7 +27,7 @@ object DestinasiEntry: DestinasiNavigasi{
 }
 
 @Composable
-fun EntrySiswa(
+fun EntrySiswaBody(
     uiStateSiswa: UIStateSiswa,
     onSiswaValueChange: (DetailSiswa) -> Unit,
     onSaveClick: () -> Unit,
