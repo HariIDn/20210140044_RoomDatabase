@@ -29,6 +29,7 @@ import com.example.kelas8.model.UIStateSiswa
 import com.example.kelas8.navigasi.DestinasiNavigasi
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.kelas8.model.PenyediaViewModel
+import com.example.kelas8.navigasi.SiswaTopAppBar
 import kotlinx.coroutines.CoroutineScope
 
 object DestinasiEntry: DestinasiNavigasi{
@@ -49,7 +50,7 @@ fun EntrySiswaScreen(
         modifier = modifier.nestedScroll(scrollBehavior.nestedScrollConnection),
         topBar = {
             SiswaTopAppBar(
-                title = stringResource(id = DestinasiEntry.titleRes)
+                title = stringResource(id = DestinasiEntry.titleRes),
                 canNavigateBack = true,
                 scrollBehavior = scrollBehavior
             )

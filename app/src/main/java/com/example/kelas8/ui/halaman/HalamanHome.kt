@@ -37,6 +37,7 @@ import com.example.kelas8.navigasi.DestinasiNavigasi
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.kelas8.data.Siswa
 import com.example.kelas8.model.PenyediaViewModel
+import com.example.kelas8.navigasi.SiswaTopAppBar
 
 object DestinasiHome: DestinasiNavigasi{
     override val route = "home"
@@ -56,7 +57,7 @@ fun HomeScreen(
         topBar = {
             SiswaTopAppBar(
                 title = stringResource(DestinasiHome.titleRes),
-                canNavigateback = false,
+                canNavigateBack = false,
                 scrollBehavior = scrollBehavior
             )
         },
