@@ -22,6 +22,11 @@ import com.example.kelas8.ui.halaman.EntrySiswaScreen
 import com.example.kelas8.ui.halaman.HomeScreen
 
 
+@Composable
+fun SiswaApp(navController: NavHostController = rememberNavController()){
+    HostNavigasi(navController = navController)
+}
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SiswaTopAppBar(
