@@ -31,6 +31,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.kelas8.model.PenyediaViewModel
 import com.example.kelas8.navigasi.SiswaTopAppBar
 import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.launch
 
 object DestinasiEntry: DestinasiNavigasi{
     override val route = "item_entry"
@@ -60,9 +61,9 @@ fun EntrySiswaScreen(
             uiStateSiswa = viewModel.uiStateSiswa,
             onSiswaValueChange = viewModel::updateUiState,
             onSaveClick = {
-                coroutineScope.Launch{
+                coroutineScope.launch{
                     viewModel.saveSiswa()
-                    navigateBack
+                    navigateBack()
                 }
             },
             modifier = Modifier
