@@ -109,32 +109,32 @@ fun FormInputSiswa(
     modifier: Modifier = Modifier,
     onValueChange: (DetailSiswa) -> Unit = {},
     enabled: Boolean = true
-){
+) {
     Column(
         modifier = Modifier,
         verticalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.padding_medium))
     ) {
         OutlinedTextField(
-            value = detailSiswa.nama, 
-            onValueChange = {onValueChange(detailSiswa.copy(nama = it))},
-            label = { Text(stringResource(id = R.string.nama))},
+            value = detailSiswa.nama,
+            onValueChange = { onValueChange(detailSiswa.copy(nama = it)) },
+            label = { Text(stringResource(id = R.string.nama)) },
             modifier = Modifier.fillMaxWidth(),
             enabled = enabled,
             singleLine = true
         )
         OutlinedTextField(
             value = detailSiswa.alamat,
-            onValueChange = {onValueChange(detailSiswa.copy(alamat = it))},
-            label = { Text(stringResource(id = R.string.alamat))},
+            onValueChange = { onValueChange(detailSiswa.copy(alamat = it)) },
+            label = { Text(stringResource(id = R.string.alamat)) },
             modifier = Modifier.fillMaxWidth(),
             enabled = enabled,
             singleLine = true
         )
         OutlinedTextField(
             value = detailSiswa.telepon,
-            onValueChange = {onValueChange(detailSiswa.copy(telepon = it))},
+            onValueChange = { onValueChange(detailSiswa.copy(telepon = it)) },
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
-            label = { Text(text = stringResource(id = R.string.telpon))},
+            label = { Text(text = stringResource(id = R.string.telpon)) },
             modifier = Modifier.fillMaxWidth(),
             enabled = enabled,
             singleLine = true
@@ -149,4 +149,5 @@ fun FormInputSiswa(
             thickness = dimensionResource(id = R.dimen.padding_small),
             modifier = Modifier.padding(bottom = dimensionResource(id = R.dimen.padding_medium))
         )
+    }
 }
